@@ -15,9 +15,25 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rUW-8L-8Se">
+                                <rect key="frame" x="142" y="44" width="91" height="32"/>
+                                <segments>
+                                    <segment title="正轉"/>
+                                    <segment title="反轉"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rUW-8L-8Se" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ecc-Ub-i14"/>
+                            <constraint firstItem="rUW-8L-8Se" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="ysy-2p-es0"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="theSegment" destination="rUW-8L-8Se" id="KZs-Ew-C8w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

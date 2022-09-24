@@ -14,35 +14,32 @@ class ViewController: UIViewController {
     var counter = 0.0
     var timer:Timer!
     
+    @IBOutlet weak var theSegment: UISegmentedControl!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         theView.bounds = CGRect(x: 0, y: 0, width: 200, height: 200)
         theView.center = self.view.center
         theView.backgroundColor = UIColor.red
-        
-        counter = 45
-        setRotate()
-        
-        
         theView.layer.cornerRadius = 15
         theView.clipsToBounds = true
-        
-      
-        
         self.view.addSubview(theView)
-        
-        
         timer = Timer.scheduledTimer(timeInterval: 1.0/60, target: self, selector: #selector(setRotate), userInfo: nil, repeats: true)
         timer.fire()
-        
-        
     }
     
     @objc func setRotate(){
         let angle =  counter * Double.pi / 180
         theView.transform = CGAffineTransform(rotationAngle: CGFloat(angle))
-        counter += 1
+        if theSegment.selectedSegmentIndex == 0{
+            counter += 1
+        }else{
+            counter -= 1
+        }
+        
+ 
     }
 
 
