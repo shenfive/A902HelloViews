@@ -23,21 +23,29 @@
                                     <segment title="反轉"/>
                                 </segments>
                             </segmentedControl>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="F0x-57-bIK">
+                                <rect key="frame" x="38" y="115" width="299" height="31"/>
+                            </slider>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="F0x-57-bIK" firstAttribute="top" secondItem="rUW-8L-8Se" secondAttribute="bottom" constant="40" id="Pg6-WA-1p0"/>
+                            <constraint firstItem="F0x-57-bIK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="cRM-5G-2HT"/>
                             <constraint firstItem="rUW-8L-8Se" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ecc-Ub-i14"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="F0x-57-bIK" secondAttribute="trailing" constant="40" id="sIG-n5-brl"/>
+                            <constraint firstItem="F0x-57-bIK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xdE-xD-Ey0"/>
                             <constraint firstItem="rUW-8L-8Se" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="ysy-2p-es0"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="theSegment" destination="rUW-8L-8Se" id="KZs-Ew-C8w"/>
+                        <outlet property="theSlider" destination="F0x-57-bIK" id="Nyt-ak-YxM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-14" y="-28"/>
+            <point key="canvasLocation" x="-15.199999999999999" y="-28.335832083958024"/>
         </scene>
     </scenes>
     <resources>

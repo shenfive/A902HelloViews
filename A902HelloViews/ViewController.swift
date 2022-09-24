@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     var counter = 0.0
     var timer:Timer!
     
+    @IBOutlet weak var theSlider: UISlider!
     @IBOutlet weak var theSegment: UISegmentedControl!
     
     
@@ -34,9 +35,9 @@ class ViewController: UIViewController {
         let angle =  counter * Double.pi / 180
         theView.transform = CGAffineTransform(rotationAngle: CGFloat(angle))
         if theSegment.selectedSegmentIndex == 0{
-            counter += 1
+            counter += Double(theSlider.value)
         }else{
-            counter -= 1
+            counter -= Double(theSlider.value)
         }
         
  
